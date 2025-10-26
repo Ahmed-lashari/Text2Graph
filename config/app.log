@@ -1,0 +1,948 @@
+2025-10-26 11:54:05,179 - core.database.connection_manager - ERROR - Failed to connect to Neo4j: Unable to retrieve routing information
+2025-10-26 11:56:53,460 - core.database.connection_manager - ERROR - Failed to connect to Neo4j: Unable to retrieve routing information
+2025-10-26 11:56:56,252 - core.database.connection_manager - ERROR - Failed to connect to Neo4j: Unable to retrieve routing information
+2025-10-26 11:57:30,412 - core.database.connection_manager - ERROR - Failed to connect to Neo4j: Unable to retrieve routing information
+2025-10-26 11:57:32,846 - core.database.connection_manager - ERROR - Failed to connect to Neo4j: Unable to retrieve routing information
+2025-10-26 11:59:51,965 - core.database.connection_manager - ERROR - Failed to connect to Neo4j: Unable to retrieve routing information
+2025-10-26 12:01:15,905 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:01:16,319 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:01:21,261 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:01:21,529 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:01:21,579 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:01:21,580 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:01:21,887 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:04:06,430 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:04:06,830 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:04:09,233 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:04:09,538 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:04:11,924 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:04:12,193 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:04:12,245 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:04:12,247 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:04:12,538 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:06:40,996 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:06:41,660 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:06:43,181 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:06:43,510 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:06:50,486 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:06:50,753 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:06:50,806 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:06:50,807 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:06:51,133 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:06:57,441 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:06:57,755 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:11:48,581 - core.database.connection_manager - INFO - Neo4j connection established
+2025-10-26 12:11:50,593 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:11:51,608 - services.graph_service - ERROR - Error in process_and_create_graph: Unable to retrieve routing information
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 72, in process_and_create_graph
+    self.graph_builder.clear_database()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 17, in clear_database
+    session.run("MATCH (n) DETACH DELETE n")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 315, in run
+    self._connect(self._config.default_access_mode)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 136, in _connect
+    super()._connect(
+    ~~~~~~~~~~~~~~~~^
+        access_mode, auth=self._config.auth, **acquire_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/workspace.py", line 186, in _connect
+    target_db = self._get_routing_target_database(
+        acquire_auth, ssr_enabled=ssr_enabled
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/workspace.py", line 260, in _get_routing_target_database
+    self._pool.update_routing_table(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        database=self._config.database,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        database_callback=self._make_db_resolution_callback(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_pool.py", line 1025, in update_routing_table
+    raise ServiceUnavailable("Unable to retrieve routing information")
+neo4j.exceptions.ServiceUnavailable: Unable to retrieve routing information
+2025-10-26 12:14:57,937 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:18:32,531 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+s://ac4698e2.databases.neo4j.io
+2025-10-26 12:18:32,532 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:18:32,533 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:18:32,852 - core.database.connection_manager - ERROR - ❌ Failed to connect to Neo4j: Unable to retrieve routing information
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/database/connection_manager.py", line 45, in connect
+    result = session.run("RETURN 1 as test")
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 315, in run
+    self._connect(self._config.default_access_mode)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 136, in _connect
+    super()._connect(
+    ~~~~~~~~~~~~~~~~^
+        access_mode, auth=self._config.auth, **acquire_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/workspace.py", line 186, in _connect
+    target_db = self._get_routing_target_database(
+        acquire_auth, ssr_enabled=ssr_enabled
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/workspace.py", line 260, in _get_routing_target_database
+    self._pool.update_routing_table(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        database=self._config.database,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        database_callback=self._make_db_resolution_callback(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_pool.py", line 1025, in update_routing_table
+    raise ServiceUnavailable("Unable to retrieve routing information")
+neo4j.exceptions.ServiceUnavailable: Unable to retrieve routing information
+2025-10-26 12:20:01,428 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:20:01,428 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:20:01,429 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:20:03,076 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:20:03,238 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:20:41,783 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:20:41,783 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:20:41,783 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:20:43,067 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:20:43,214 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:20:49,157 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:20:49,158 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:20:49,158 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:20:50,490 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:20:50,634 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:20:52,304 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:20:52,305 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:20:52,305 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:20:53,706 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:20:53,863 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:20:54,646 - services.graph_service - ERROR - Error in process_and_create_graph: GraphBuilder.create_app_graph() missing 1 required positional argument: 'status_text'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 79, in process_and_create_graph
+    self.graph_builder.create_app_graph(graph_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+TypeError: GraphBuilder.create_app_graph() missing 1 required positional argument: 'status_text'
+2025-10-26 12:20:54,654 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:22:26,228 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:22:26,228 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:22:26,229 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:22:27,925 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:22:28,091 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:22:30,623 - ui.components.graph_visualizer - ERROR - Error visualizing graph: 'graph_height'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/ui/components/graph_visualizer.py", line 28, in render_graph_visualization
+    height=UI_CONFIG["graph_height"],
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'graph_height'
+2025-10-26 12:22:30,625 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:24:46,439 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:24:46,440 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:24:46,441 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:24:47,874 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:24:48,023 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:24:48,983 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:24:48,984 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:24:48,985 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:24:50,294 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:24:50,437 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:24:53,148 - ui.components.graph_visualizer - WARNING - Could not fetch graph stats: 'GraphBuilder' object has no attribute 'get_graph_stats'
+2025-10-26 12:24:53,150 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:28:18,961 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:28:18,962 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:28:18,963 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:28:20,456 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:28:20,602 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:28:22,810 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:28:22,810 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:28:22,810 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:28:24,054 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:28:24,191 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:28:27,364 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:28:27,364 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:28:27,365 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:28:28,864 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:28:30,818 - ui.components.graph_visualizer - WARNING - Could not fetch graph stats: 'GraphBuilder' object has no attribute 'get_graph_stats'
+2025-10-26 12:28:30,820 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:28:59,718 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:28:59,718 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:28:59,719 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:29:01,025 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:29:01,161 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:29:07,016 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:29:07,017 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:29:07,017 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:29:08,333 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:29:08,475 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:29:10,079 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:29:10,080 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:29:10,080 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:29:11,385 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:29:11,588 - core.processor.csv_processor - ERROR - Error processing CSV: Can only use .str accessor with string values!
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 32, in process
+    df = self._clean_dataframe(df)
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 63, in _clean_dataframe
+    df[col] = df[col].str.strip() if df[col].dtype == 'object' else df[col]
+              ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/generic.py", line 6299, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 191, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 245, in _validate
+    raise AttributeError("Can only use .str accessor with string values!")
+AttributeError: Can only use .str accessor with string values!. Did you mean: 'std'?
+2025-10-26 12:29:11,595 - services.graph_service - ERROR - Error in process_and_create_graph: Failed to process CSV: Can only use .str accessor with string values!
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 32, in process
+    df = self._clean_dataframe(df)
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 63, in _clean_dataframe
+    df[col] = df[col].str.strip() if df[col].dtype == 'object' else df[col]
+              ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/generic.py", line 6299, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 191, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 245, in _validate
+    raise AttributeError("Can only use .str accessor with string values!")
+AttributeError: Can only use .str accessor with string values!. Did you mean: 'std'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 67, in process_and_create_graph
+    df, summary = processor.process()
+                  ~~~~~~~~~~~~~~~~~^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 49, in process
+    raise ValueError(f"Failed to process CSV: {e}")
+ValueError: Failed to process CSV: Can only use .str accessor with string values!
+2025-10-26 12:29:11,598 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:29:21,549 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:29:21,549 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:29:21,550 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:29:22,873 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:29:23,009 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:29:25,736 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:29:25,736 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:29:25,737 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:29:27,083 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:29:27,235 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:29:30,346 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:29:30,346 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:29:30,348 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:29:31,636 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:29:31,791 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:31:01,026 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:31:01,027 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:31:01,028 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:31:02,474 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:31:02,676 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:31:03,348 - core.processor.csv_processor - ERROR - Error processing CSV: Can only use .str accessor with string values!
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 32, in process
+    df = self._clean_dataframe(df)
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 63, in _clean_dataframe
+    df[col] = df[col].str.strip() if df[col].dtype == 'object' else df[col]
+              ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/generic.py", line 6299, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 191, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 245, in _validate
+    raise AttributeError("Can only use .str accessor with string values!")
+AttributeError: Can only use .str accessor with string values!. Did you mean: 'std'?
+2025-10-26 12:31:03,353 - services.graph_service - ERROR - Error in process_and_create_graph: Failed to process CSV: Can only use .str accessor with string values!
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 32, in process
+    df = self._clean_dataframe(df)
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 63, in _clean_dataframe
+    df[col] = df[col].str.strip() if df[col].dtype == 'object' else df[col]
+              ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/generic.py", line 6299, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 191, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/strings/accessor.py", line 245, in _validate
+    raise AttributeError("Can only use .str accessor with string values!")
+AttributeError: Can only use .str accessor with string values!. Did you mean: 'std'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 67, in process_and_create_graph
+    df, summary = processor.process()
+                  ~~~~~~~~~~~~~~~~~^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/csv_processor.py", line 49, in process
+    raise ValueError(f"Failed to process CSV: {e}")
+ValueError: Failed to process CSV: Can only use .str accessor with string values!
+2025-10-26 12:31:03,362 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:35:10,457 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:35:10,458 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:35:10,460 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:35:12,161 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:35:12,302 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:35:19,428 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:35:19,429 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:35:19,432 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:35:20,727 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:35:20,878 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:35:22,356 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:35:22,357 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:35:22,357 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:35:23,668 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:35:23,811 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:35:28,391 - ui.components.graph_visualizer - WARNING - Could not fetch graph stats: 'GraphBuilder' object has no attribute 'get_graph_stats'
+2025-10-26 12:35:28,393 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:36:49,802 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:36:49,803 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:36:49,804 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:36:51,306 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:36:51,443 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:36:53,982 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:36:53,983 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:36:53,983 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:36:55,409 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:36:57,552 - ui.components.graph_visualizer - WARNING - Could not fetch graph stats: 'GraphBuilder' object has no attribute 'get_graph_stats'
+2025-10-26 12:36:57,554 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:37:19,531 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:37:19,532 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:37:19,532 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:37:20,774 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:37:20,906 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:37:23,698 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:37:23,698 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:37:23,699 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:37:24,991 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:37:27,313 - ui.components.graph_visualizer - WARNING - Could not fetch graph stats: 'GraphBuilder' object has no attribute 'get_graph_stats'
+2025-10-26 12:37:27,315 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:47:41,619 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:47:41,620 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:47:41,622 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:47:43,010 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:47:43,150 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:47:44,658 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:47:44,659 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:47:44,659 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:47:45,961 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:47:46,106 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:47:48,351 - __main__ - ERROR - Error in main flow: render_graph_visualization() missing 1 required positional argument: 'graph_service'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/app.py", line 59, in main
+    render_graph_visualization(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        # graph_service=graph_service,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        graph_name=result["graph_name"]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: render_graph_visualization() missing 1 required positional argument: 'graph_service'
+2025-10-26 12:47:48,355 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:48:03,120 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:48:03,121 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:48:03,125 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:48:04,432 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:48:04,580 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:48:05,510 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:48:05,511 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:48:05,511 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:48:06,818 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:48:06,956 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:48:09,630 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:49:22,510 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:49:22,512 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:49:22,517 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:49:23,914 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:49:24,048 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:49:25,509 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:49:25,509 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:49:25,510 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:49:26,822 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:49:26,982 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:49:30,020 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:54:51,176 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:54:51,176 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:54:51,177 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:54:52,486 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:54:52,618 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:54:54,754 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:54:54,754 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:54:54,755 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:54:56,062 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:54:56,265 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:54:59,001 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:55:55,208 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:55:55,208 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:55:55,210 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:55:56,562 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:55:56,707 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:56:04,449 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:56:04,450 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:56:04,450 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:56:05,776 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:56:05,929 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 12:56:06,520 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 12:56:06,520 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 12:56:06,521 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 12:56:07,802 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 12:56:07,957 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 12:56:10,956 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:06:49,982 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:06:49,984 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:06:49,988 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:06:51,631 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:06:51,773 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:06:57,077 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:06:57,078 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:06:57,078 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:06:58,470 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:06:58,611 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:07:00,561 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:07:00,561 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:07:00,562 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:07:01,924 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:07:04,837 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:27:28,818 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:27:28,821 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:27:28,823 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:27:30,413 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:27:30,558 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:27:32,443 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:27:32,443 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:27:32,444 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:27:33,729 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:27:33,886 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:27:34,538 - core.processor.text_processor - ERROR - Error processing text: RelationshipExtractor._extract_prep_relationships() missing 1 required positional argument: 'all_entities'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/text_processor.py", line 53, in process
+    relationships = self.relationship_extractor.extract_from_sentences(
+        sentences, entities
+    )
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/nlp/relationship_extractor.py", line 57, in extract_from_sentences
+    prep_rels = self._extract_prep_relationships(doc, known_entities)
+TypeError: RelationshipExtractor._extract_prep_relationships() missing 1 required positional argument: 'all_entities'
+2025-10-26 13:27:34,539 - services.graph_service - ERROR - Error in process_and_create_graph: RelationshipExtractor._extract_prep_relationships() missing 1 required positional argument: 'all_entities'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 67, in process_and_create_graph
+    df, summary = processor.process()
+                  ~~~~~~~~~~~~~~~~~^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/text_processor.py", line 53, in process
+    relationships = self.relationship_extractor.extract_from_sentences(
+        sentences, entities
+    )
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/nlp/relationship_extractor.py", line 57, in extract_from_sentences
+    prep_rels = self._extract_prep_relationships(doc, known_entities)
+TypeError: RelationshipExtractor._extract_prep_relationships() missing 1 required positional argument: 'all_entities'
+2025-10-26 13:27:34,542 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:28:30,811 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:28:30,812 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:28:30,814 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:28:32,135 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:28:32,281 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:28:33,542 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:28:33,543 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:28:33,544 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:28:34,940 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:28:35,100 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:28:37,239 - services.graph_service - ERROR - Error in process_and_create_graph: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+neo4j.exceptions.GqlError: {gql_status: 22N01} {gql_status_description: error: data exception - invalid type. Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {message: 22N01: Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {diagnostic_record: {'_classification': 'CLIENT_ERROR', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}} {raw_classification: CLIENT_ERROR}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 81, in process_and_create_graph
+    self.graph_builder.create_app_graph(graph_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 26, in create_app_graph
+    self._create_text_graph(session, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 93, in _create_text_graph
+    session.run(
+    ~~~~~~~~~~~^
+        query_fallback,
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        rel_type=rel_type
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 330, in run
+    self._auto_result._run(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<6 lines>...
+        self._config.notifications_disabled_classifications,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 236, in _run
+    self._attach()
+    ~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 430, in _attach
+    self._connection.fetch_message()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 193, in inner
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt.py", line 863, in fetch_message
+    res = self._process_message(tag, fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt5.py", line 1208, in _process_message
+    response.on_failure(summary_metadata or {})
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 263, in on_failure
+    raise self._hydrate_error(metadata)
+neo4j.exceptions.CypherTypeError: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+2025-10-26 13:28:37,324 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:39:52,737 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:39:52,738 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:39:52,740 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:39:54,338 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:39:54,485 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:39:55,791 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:39:55,791 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:39:55,792 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:39:57,138 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:39:57,288 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:39:59,306 - services.graph_service - ERROR - Error in process_and_create_graph: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+neo4j.exceptions.GqlError: {gql_status: 22N01} {gql_status_description: error: data exception - invalid type. Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {message: 22N01: Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {diagnostic_record: {'_classification': 'CLIENT_ERROR', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}} {raw_classification: CLIENT_ERROR}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 81, in process_and_create_graph
+    self.graph_builder.create_app_graph(graph_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 26, in create_app_graph
+    self._create_text_graph(session, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 96, in _create_text_graph
+    session.run(
+    ~~~~~~~~~~~^
+        query_fallback,
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        rel_type=rel_type
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 330, in run
+    self._auto_result._run(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<6 lines>...
+        self._config.notifications_disabled_classifications,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 236, in _run
+    self._attach()
+    ~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 430, in _attach
+    self._connection.fetch_message()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 193, in inner
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt.py", line 863, in fetch_message
+    res = self._process_message(tag, fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt5.py", line 1208, in _process_message
+    response.on_failure(summary_metadata or {})
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 263, in on_failure
+    raise self._hydrate_error(metadata)
+neo4j.exceptions.CypherTypeError: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+2025-10-26 13:39:59,401 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:40:59,864 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:40:59,865 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:40:59,867 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:41:01,155 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:41:01,292 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:41:11,909 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:41:11,910 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:41:11,910 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:41:13,316 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:41:13,454 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:41:28,334 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:41:28,334 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:41:28,334 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:41:29,533 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:41:29,657 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:41:38,290 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:41:38,290 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:41:38,291 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:41:39,547 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:41:39,685 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:41:42,304 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:41:42,305 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:41:42,306 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:41:43,859 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:41:45,580 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:41:47,645 - services.graph_service - ERROR - Error in process_and_create_graph: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+neo4j.exceptions.GqlError: {gql_status: 22N01} {gql_status_description: error: data exception - invalid type. Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {message: 22N01: Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {diagnostic_record: {'_classification': 'CLIENT_ERROR', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}} {raw_classification: CLIENT_ERROR}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 81, in process_and_create_graph
+    self.graph_builder.create_app_graph(graph_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 26, in create_app_graph
+    self._create_text_graph(session, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 96, in _create_text_graph
+    session.run(
+    ~~~~~~~~~~~^
+        query_fallback,
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        rel_type=rel_type
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 330, in run
+    self._auto_result._run(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<6 lines>...
+        self._config.notifications_disabled_classifications,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 236, in _run
+    self._attach()
+    ~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 430, in _attach
+    self._connection.fetch_message()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 193, in inner
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt.py", line 863, in fetch_message
+    res = self._process_message(tag, fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt5.py", line 1208, in _process_message
+    response.on_failure(summary_metadata or {})
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 263, in on_failure
+    raise self._hydrate_error(metadata)
+neo4j.exceptions.CypherTypeError: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+2025-10-26 13:44:02,250 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:44:04,120 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:44:04,123 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:44:04,124 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:44:05,489 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:44:05,640 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:44:07,563 - services.graph_service - ERROR - Error in process_and_create_graph: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+neo4j.exceptions.GqlError: {gql_status: 22N01} {gql_status_description: error: data exception - invalid type. Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {message: 22N01: Expected the value Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")} to be of type BOOLEAN, STRING, INTEGER, FLOAT, DATE, LOCAL TIME, ZONED TIME, LOCAL DATETIME, ZONED DATETIME, DURATION or POINT, but was of type MAP NOT NULL.} {diagnostic_record: {'_classification': 'CLIENT_ERROR', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}} {raw_classification: CLIENT_ERROR}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 81, in process_and_create_graph
+    self.graph_builder.create_app_graph(graph_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 26, in create_app_graph
+    self._create_text_graph(session, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 96, in _create_text_graph
+    session.run(
+    ~~~~~~~~~~~^
+        query_fallback,
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        rel_type=rel_type
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/session.py", line 330, in run
+    self._auto_result._run(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<6 lines>...
+        self._config.notifications_disabled_classifications,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 236, in _run
+    self._attach()
+    ~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/work/result.py", line 430, in _attach
+    self._connection.fetch_message()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 193, in inner
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt.py", line 863, in fetch_message
+    res = self._process_message(tag, fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_bolt5.py", line 1208, in _process_message
+    response.on_failure(summary_metadata or {})
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/neo4j/_sync/io/_common.py", line 263, in on_failure
+    raise self._hydrate_error(metadata)
+neo4j.exceptions.CypherTypeError: {code: Neo.ClientError.Statement.TypeError} {message: Property values can only be of primitive types or arrays thereof. Encountered: Map{2002 -> String("DATE"), AI -> String("GPE"), XCorp -> String("ORG"), Elon Musk -> String("PERSON"), Jeff Bezos -> String("PERSON"), cloud computing -> String("PERSON"), 1999 -> String("DATE")}.}
+2025-10-26 13:44:07,649 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:48:30,069 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:48:30,069 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:48:30,071 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:48:31,434 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:48:31,575 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:48:34,849 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:51:16,875 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:51:16,876 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:51:16,878 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:51:18,316 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:51:18,454 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:51:20,270 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:51:20,271 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:51:20,271 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:51:21,617 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:51:21,774 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 13:51:22,363 - core.processor.text_processor - ERROR - Error processing text: 'RelationshipExtractor' object has no attribute '_extract_entity_patterns'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/text_processor.py", line 53, in process
+    relationships = self.relationship_extractor.extract_from_sentences(
+        sentences, entities
+    )
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/nlp/relationship_extractor.py", line 49, in extract_from_sentences
+    pattern_rels = self._extract_entity_patterns(sentence, known_entities)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RelationshipExtractor' object has no attribute '_extract_entity_patterns'
+2025-10-26 13:51:22,365 - services.graph_service - ERROR - Error in process_and_create_graph: 'RelationshipExtractor' object has no attribute '_extract_entity_patterns'
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 67, in process_and_create_graph
+    df, summary = processor.process()
+                  ~~~~~~~~~~~~~~~~~^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/text_processor.py", line 53, in process
+    relationships = self.relationship_extractor.extract_from_sentences(
+        sentences, entities
+    )
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/nlp/relationship_extractor.py", line 49, in extract_from_sentences
+    pattern_rels = self._extract_entity_patterns(sentence, known_entities)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RelationshipExtractor' object has no attribute '_extract_entity_patterns'
+2025-10-26 13:51:22,367 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 13:51:59,791 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 13:51:59,792 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 13:51:59,793 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 13:52:01,088 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 13:52:01,229 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:01:58,545 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:01:58,546 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:01:58,548 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:02:00,038 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:02:00,205 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 14:02:03,730 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:03:33,774 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:03:33,775 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:03:33,778 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:03:35,205 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:03:35,342 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:03:38,469 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:03:38,470 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:03:38,470 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:03:39,764 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:03:39,898 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:03:41,966 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:03:41,967 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:03:41,967 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:03:43,273 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:03:44,634 - services.graph_service - ERROR - Error in process_and_create_graph: single positional indexer is out-of-bounds
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 81, in process_and_create_graph
+    self.graph_builder.create_app_graph(graph_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 29, in create_app_graph
+    self._create_structured_graph(session, app_name, df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_builder.py", line 117, in _create_structured_graph
+    row = df.iloc[0].to_dict()
+          ~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
+    self._validate_integer(key, axis)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+2025-10-26 14:03:44,649 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:08:51,521 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:08:51,521 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:08:51,522 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:08:53,029 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:08:53,182 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:08:55,347 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:08:55,347 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:08:55,348 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:08:56,633 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:08:56,781 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 14:08:57,362 - core.processor.text_processor - INFO - Found 7 unique entities
+2025-10-26 14:08:58,227 - core.processor.text_processor - INFO - Extracted 0 relationships from 8 sentences
+2025-10-26 14:08:59,903 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:09:55,997 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:09:55,999 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:09:56,005 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:09:57,308 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:09:57,450 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:10:04,496 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:10:04,496 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:10:04,496 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:10:05,908 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:10:06,048 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:10:07,762 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:10:07,762 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:10:07,763 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:10:09,237 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:11:51,477 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:11:51,477 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:11:51,478 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:11:52,801 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:11:52,946 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:11:59,162 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:11:59,163 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:11:59,163 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:12:00,465 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:12:00,607 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:12:02,446 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:12:02,447 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:12:02,449 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:12:03,797 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:12:05,551 - utils.text_utils - INFO - Downloading NLTK package: averaged_perceptron_tagger
+2025-10-26 14:16:13,594 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:16:13,594 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:16:13,594 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:16:14,988 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:16:15,132 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:16:20,464 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:16:20,465 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:16:20,466 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:16:21,820 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:16:21,968 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:16:23,994 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:16:23,994 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:16:23,995 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:16:25,380 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:16:27,080 - services.graph_service - ERROR - Error in process_and_create_graph: cannot import name 'NLP_CONFIG' from 'config' (unknown location)
+Traceback (most recent call last):
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/services/graph_service.py", line 63, in process_and_create_graph
+    processor = ProcessorFactory.get_processor(uploaded_file)
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/base_processor.py", line 47, in get_processor
+    from core.processor.text_processor import TextProcessor
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/core/processor/text_processor.py", line 12, in <module>
+    from utils.text_utils import clean_text, tokenize_sentences
+  File "/Users/hassam/Documents/my_data/Python/Text2Graph/utils/text_utils.py", line 8, in <module>
+    from config import NLP_CONFIG
+ImportError: cannot import name 'NLP_CONFIG' from 'config' (unknown location)
+2025-10-26 14:17:33,208 - utils.text_utils - INFO - NLTK punkt_tab found
+2025-10-26 14:17:44,533 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:18:25,056 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:18:25,058 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:18:25,059 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:18:26,500 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:18:26,638 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:18:29,208 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:18:29,208 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:18:29,209 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:18:30,469 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:18:30,613 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:18:32,541 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:18:32,542 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:18:32,542 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:18:34,193 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:20:10,707 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:20:10,708 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:20:10,708 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:20:12,208 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:20:12,357 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:20:15,701 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:20:15,702 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:20:15,702 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:20:16,970 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:20:17,117 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:20:19,779 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:20:19,780 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:20:19,781 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:20:21,135 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:20:22,644 - utils.text_utils - INFO - NLTK punkt_tab found
+2025-10-26 14:20:23,137 - core.processor.text_processor - INFO - Found 4 unique entities
+2025-10-26 14:20:23,200 - core.processor.text_processor - INFO - Extracted 0 relationships from 1 sentences
+2025-10-26 14:20:42,808 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:20:44,384 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:20:44,384 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:20:44,385 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:20:45,700 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:20:45,847 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:20:47,593 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:20:47,593 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:20:47,594 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:20:48,926 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:20:49,516 - core.processor.text_processor - INFO - Found 9 unique entities
+2025-10-26 14:20:51,323 - core.processor.text_processor - INFO - Extracted 0 relationships from 10 sentences
+2025-10-26 14:20:52,566 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:21:39,906 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:21:39,907 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:21:39,910 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:21:41,428 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:21:41,574 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:21:43,135 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:21:43,135 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:21:43,135 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:21:44,754 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:21:44,951 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:21:47,208 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:21:47,209 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:21:47,209 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:21:48,512 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:21:49,087 - core.processor.text_processor - INFO - Found 7 unique entities
+2025-10-26 14:21:49,965 - core.processor.text_processor - INFO - Extracted 3 relationships from 8 sentences
+2025-10-26 14:21:52,152 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:22:53,354 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:22:53,356 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:22:53,357 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:22:54,686 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:22:55,322 - core.processor.text_processor - INFO - Found 7 unique entities
+2025-10-26 14:22:56,188 - core.processor.text_processor - INFO - Extracted 3 relationships from 8 sentences
+2025-10-26 14:22:58,714 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:23:03,097 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:23:03,098 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:23:03,098 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:23:04,767 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:23:04,913 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:23:11,603 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:23:11,604 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:23:11,604 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:23:12,949 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:23:13,096 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:23:14,503 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:23:14,503 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:23:14,503 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:23:15,742 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:23:16,339 - core.processor.text_processor - INFO - Found 12 unique entities
+2025-10-26 14:23:22,134 - core.processor.text_processor - INFO - Extracted 5 relationships from 17 sentences
+2025-10-26 14:23:26,363 - core.database.connection_manager - INFO - Neo4j connection closed

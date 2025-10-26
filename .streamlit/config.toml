@@ -1,0 +1,13 @@
+[theme]
+base="light"
+primaryColor="#00BFA6"
+backgroundColor="#F8F7F4"
+secondaryBackgroundColor="#FFFFFF"
+textColor="#1F2937"
+font = "sans-serif"
+headingFont = "sans-serif"
+codeFont = "monospace"
+[theme.sidebar]
+font = "sans-serif"
+headingFont = "sans-serif"
+codeFont = "monospace"
