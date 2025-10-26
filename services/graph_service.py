@@ -24,12 +24,11 @@ class GraphService:
         self.graph_builder = GraphBuilder(self.driver)
     
     def show_connection_status(self):
-        """Display connection status in sidebar."""
+        """Display connection status in sidebar with bottom developer credit."""
         with st.sidebar:
             st.markdown("### 🔗 Connection Status")
             if self.connection_manager.is_connected():
                 st.success("Neo4j: Connected ✓")
-                
                 if st.button("🔄 Reconnect"):
                     self.connection_manager.reconnect()
                     st.rerun()
@@ -38,6 +37,30 @@ class GraphService:
                 if st.button("🔌 Connect"):
                     self.connection_manager.connect()
                     st.rerun()
+
+            # Flexible spacer
+            st.markdown("<br><br><br><br><br><br>", unsafe_allow_html=True)
+
+            # Bottom developer credit
+            st.markdown(
+            """
+            <div style="position:fixed; bottom:10px; width:230px; font-size:0.85em;">
+                <strong>M.A. Lashari</strong><br>
+                🎓 AI UnderGrad<br>
+                📍 Pakistan<br>
+                Exploring diverse tech stacks<br>
+                <a href='YOUR_LINKEDIN_URL' target='_blank'>
+                    <img src='https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white' />
+                </a>
+                <a href='YOUR_GITHUB_URL' target='_blank'>
+                    <img src='https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white' />
+                </a>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
     
     def process_and_create_graph(
         self,

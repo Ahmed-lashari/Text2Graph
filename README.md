@@ -1,159 +1,121 @@
-# Text2Graph
+# 🧠 Text2Graph
 
 ## Project Overview
 
-Text2Graph is a knowledge graph generation platform that converts structured and unstructured data into visual, queryable graph representations. The system supports CSV, JSON, and plain text files as input and generates nodes and relationships in Neo4j. For interactive visualization, the project leverages PyVis and Streamlit to provide an intuitive and dynamic interface.
+**Text2Graph** is an advanced knowledge graph generation platform designed to convert both structured and unstructured data into interactive, queryable graph representations. The system supports CSV, JSON, and plain text files, generating nodes and relationships within a Neo4j database. For dynamic visualization, the platform integrates PyVis with Streamlit to provide an intuitive and interactive user interface.
 
-The primary goal of Text2Graph is to enable users to explore data relationships, identify patterns, and derive insights from raw textual or structured information without extensive manual preprocessing.
+The primary objective of Text2Graph is to enable users to uncover hidden relationships, identify patterns, and extract actionable insights from raw data without extensive manual preprocessing.
+
+---
 
 ## Features
 
-* Support for structured datasets including CSV and JSON
-* Support for unstructured textual data such as plain text files
+* Support for structured datasets (CSV, JSON)
+* Support for unstructured textual data (TXT)
 * Automatic entity extraction using spaCy and NLTK
-* Relationship extraction using dependency parsing, verb patterns, and entity pattern recognition
-* Interactive graph visualization using PyVis
+* Relationship extraction via entity patterns, dependency parsing, and prepositional phrase mapping
+* Interactive network graph visualization with PyVis
 * Neo4j integration for persistent graph storage
-* Streamlit frontend for file upload, processing, and visualization
+* Streamlit frontend with file upload, processing progress, and graph exploration
 * Dynamic handling of entity types and relationship types
+* Error handling for invalid Neo4j property types
+
+---
 
 ## Architecture
 
 ```plaintext
 TEXT2GRAPH/
 │
-├── app.py                          # Main Streamlit entry point (keep minimal)
-├── config.py                       # Central configuration file
+├── app.py                          # Streamlit entry point
+├── config.py                       # Configuration
 ├── requirements.txt
 ├── README.md
 ├── .env
 ├── .gitignore
 │
-├── core/                           # Core business logic
-│   ├── __init__.py
-│   ├── database/                   # Database related
-│   │   ├── __init__.py
-│   │   ├── neo4j_client.py        # Renamed from neo4j_client.py
-│   │   └── connection_manager.py   # Manages connection lifecycle
+├── core/
+│   ├── database/
+│   │   ├── connection_manager.py
+│   │   └── neo4j_client.py
 │   │
-│   ├── processors/                 # Data processing
-│   │   ├── __init__.py
-│   │   ├── base_processor.py      # Abstract base class
-│   │   ├── text_processor.py      # Text file processing
-│   │   ├── csv_processor.py       # CSV processing
-│   │   └── json_processor.py      # JSON processing
+│   ├── processors/
+│   │   ├── base_processor.py
+│   │   ├── text_processor.py
+│   │   ├── csv_processor.py
+│   │   └── json_processor.py
 │   │
-│   ├── graph/                      # Graph operations
-│   │   ├── __init__.py
-│   │   ├── graph_builder.py       # Graph creation
-│   │   └── graph_queries.py       # Cypher queries
+│   ├── graph/
+│   │   ├── graph_builder.py
+│   │   └── graph_queries.py
 │   │
-│   └── nlp/                        # NLP processing
-│       ├── __init__.py
-│       ├── entity_extractor.py    # Entity extraction
-│       └── relationship_extractor.py  # Relationship extraction
+│   └── nlp/
+│       ├── entity_extractor.py
+│       └── relationship_extractor.py
 │
-├── services/                       # Business logic layer
-│   ├── __init__.py
-│   ├── file_service.py            # File handling orchestration
-│   └── graph_service.py           # Graph operations orchestration
+├── services/
+│   ├── file_service.py
+│   └── graph_service.py
 │
-├── ui/                             # UI components (renamed from views)
-│   ├── __init__.py
-│   ├── components/                # Reusable UI components
-│   │   ├── __init__.py
-│   │   ├── file_uploader.py      # File upload component
-│   │   ├── progress_bar.py       # Progress indicators
-│   │   └── graph_visualizer.py   # Graph visualization
-│   │
-│   └── pages/                     # Multi-page support (future)
-│       ├── __init__.py
+├── ui/
+│   ├── components/
+│   │   ├── file_uploader.py
+│   │   ├── progress_bar.py
+│   │   └── graph_visualizer.py
+│   └── pages/
 │       └── home.py
 │
-├── utils/                          # Utility functions
-│   ├── __init__.py
+├── utils/
 │   ├── file_utils.py
 │   ├── text_utils.py
 │   ├── validators.py
 │   └── logger.py
 │
-├── models/                         # Data models/schemas
-│   ├── __init__.py
+├── models/
 │   ├── entity.py
 │   ├── relationship.py
 │   └── graph_data.py
 │
-├── tests/                          # Unit tests
-│   ├── __init__.py
+├── tests/
 │   ├── test_processors.py
 │   ├── test_graph_builder.py
 │   └── test_services.py
 │
-├── data/                           # Data storage
-│   ├── uploads/                   # Temporary file storage
-│   ├── nltk_data/                 # NLTK data
-│   └── samples/                   # Sample files
+├── data/
+│   ├── uploads/
+│   ├── nltk_data/
+│   └── samples/
 │       ├── demo.txt
 │       ├── example.csv
 │       └── example.json
 │
-└── assets/                         # Static assets
+└── assets/
     ├── styles/
-    │   └── custom.css
     └── images/
-
 ```
 
-
-Text2Graph follows a modular architecture:
-
-1. **Frontend**
-
-   * Built with Streamlit
-   * Provides file upload, progress tracking, and graph visualization
-   * Sidebar displays Neo4j connection status
-
-2. **Data Processing**
-
-   * `DataProcessor` class handles file reading, preprocessing, and DataFrame generation
-   * Structured files are read into DataFrames directly
-   * Unstructured text is tokenized into sentences, entities are extracted using spaCy, and named entity relationships are mapped
-
-3. **Graph Builder**
-
-   * `GraphBuilder` class handles interaction with Neo4j
-   * Creates nodes and relationships for structured CSV/JSON data
-   * Creates text-based graphs with dynamic entity types and relationship types
-   * Handles errors such as invalid Neo4j property types
-   * Provides methods to export graph data to PyVis for visualization
-
-4. **Visualization**
-
-   * PyVis is used to render interactive network graphs
-   * Node colors, shapes, and sizes are customizable based on entity type
-   * Relationships are annotated and visually distinguishable
-   * Streamlit embeds the HTML graph for dynamic exploration
+---
 
 ## Installation
 
 ### Prerequisites
 
-* Python 3.10 or higher
-* Neo4j AuraDB
+* Python 3.10+
+* Neo4j AuraDB or local Neo4j instance
 * Streamlit
-* spaCy and the `en_core_web_sm` model
-* NLTK and `punkt` tokenizer
+* spaCy (`en_core_web_sm` model)
+* NLTK (`punkt` tokenizer)
 * PyVis
 * Pandas
 
 ### Installation Steps
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone <repository_url>
 cd Text2Graph
 
-# Create and activate a virtual environment
+# Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
@@ -167,78 +129,89 @@ python -m spacy download en_core_web_sm
 python -m nltk.downloader punkt
 ```
 
+---
+
 ## Usage
 
-1. Launch Streamlit:
+1. Launch the Streamlit app:
 
 ```bash
 streamlit run app.py
 ```
 
-2. Upload a CSV, JSON, or TXT file through the web interface.
-3. Track processing progress through the progress bar.
-4. View the extracted knowledge graph in the interactive PyVis network.
-5. Explore relationships, entity types, and nested connections directly in Neo4j.
+2. Upload CSV, JSON, or TXT files.
+3. Track progress via the progress bar.
+4. View the generated knowledge graph in PyVis.
+5. Explore entities, relationships, and nested connections directly in Neo4j.
+
+---
 
 ## Technical Details
 
 ### Text Processing
 
-* Uses NLTK for sentence tokenization
+* NLTK for sentence tokenization
 * spaCy for named entity recognition
-* Relationships are extracted using three methods:
+* Relationships extracted using:
 
   * Entity pattern matching
   * Dependency parsing with verbs
   * Prepositional phrase mapping
-* Data is transformed into a DataFrame with `source`, `target`, `relationship`, `source_type`, `target_type`, and `sentence` columns
+* Data transformed into a DataFrame with:
+
+  * `source`
+  * `target`
+  * `relationship`
+  * `source_type`
+  * `target_type`
+  * `sentence`
 
 ### Neo4j Integration
 
-* Uses `neo4j` Python driver for database operations
-* Nodes are dynamically labeled based on entity type
-* Relationships are dynamically named and sanitized for Neo4j constraints
-* Structured data creates property-based relationships
-* Textual data creates fully labeled node-relationship-node structures
-* Graph persistence allows querying using Cypher
+* Nodes dynamically labeled based on entity type
+* Relationships dynamically named and sanitized
+* Structured data generates property-based relationships
+* Textual data generates fully labeled node-relationship-node structures
+* Supports graph persistence for Cypher querying
 
 ### Visualization
 
-* PyVis renders dynamic, interactive graphs
-* Supports color-coding and shape variation based on entity types
-* Embedded in Streamlit as an HTML iframe
-* Physics-based layout ensures readable and non-overlapping nodes
-
-## Error Handling
-
-* Invalid Neo4j property types are handled by fallback queries
-* Missing or incomplete text entity information defaults to generic entity types
-* Streamlit displays error messages with actionable information
-
-## Improvements and Future Work
-
-* Add support for multi-file batch uploads and processing
-* Implement more advanced NLP techniques for relationship extraction such as transformers or relation classification models
-* Enhance visualization with clustering and filtering of nodes
-* Add user-defined relationship mapping for domain-specific graphs
-* Integrate a caching layer for faster processing of repeated files
-* Enable export of graphs to JSON or GraphML for external analysis
-
-## Contributing
-
-Contributions are welcome. Please follow the repository guidelines for:
-
-* Forking the repository
-* Creating feature branches
-* Submitting pull requests
-* Reporting issues
-
-## License
-
-This project is open source and available under the MIT license.
+* PyVis renders interactive network graphs
+* Nodes color-coded and shaped based on entity type
+* Relationships annotated for clarity
+* Streamlit embeds HTML graphs with physics-based layout for readability
 
 ---
 
-If you want, I can **also write a compact version of this README with diagrams, usage screenshots, and example graphs** to make it more professional for public GitHub release.
+## Error Handling
 
-Do you want me to create that enhanced version?
+* Invalid Neo4j property types handled with fallback queries
+* Missing or incomplete entity info defaults to generic types
+* Streamlit displays errors with actionable messages
+
+---
+
+## Improvements and Future Work
+
+* Multi-file batch uploads
+* Advanced NLP for relationship extraction using transformers
+* Enhanced visualization with clustering and filtering
+* User-defined relationship mapping
+* Caching layer for repeated files
+* Graph export to JSON or GraphML
+
+---
+
+## Contributing
+
+Community members are welcome to collaborate by raising issues, suggesting features, or submitting pull requests. While the repository is private, collaborators may request access through GitHub to contribute to improvements and enhancements.
+
+---
+
+## Developers / Collaborators
+| Profile | Name | Profession | Contribution |
+| ------- | ---- | ---------- | ------------ |
+| <a href="https://www.linkedin.com/in/muhammad-ahmed-lashari/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQHdrKCpdwmgZw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699094030253?00e=1762992000&v=beta&t=aLmZVqJRjrWFPqe2t6gbj2Azg9tT82Ikn0J7naO39J8" width="100" height="80" style="border-radius:40px;"></a> | [Muhammad Ahmed Lashari](https://www.linkedin.com/in/muhammad-ahmed-lashari/) | AI UnderGrad / Flutter Developer | Developed the initial version of Text2Graph and deployed on Streamlit Cloud. |
+
+
+---

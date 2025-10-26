@@ -946,3 +946,76 @@ ImportError: cannot import name 'NLP_CONFIG' from 'config' (unknown location)
 2025-10-26 14:23:16,339 - core.processor.text_processor - INFO - Found 12 unique entities
 2025-10-26 14:23:22,134 - core.processor.text_processor - INFO - Extracted 5 relationships from 17 sentences
 2025-10-26 14:23:26,363 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:39:46,363 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:39:46,363 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:39:46,363 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:39:47,844 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:39:47,984 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:43:33,514 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:43:33,514 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:43:33,516 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:43:35,043 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:43:35,195 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:45:03,568 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:45:03,569 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:45:03,570 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:45:05,043 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:45:05,190 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:47:01,626 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:47:01,626 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:47:01,627 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:47:03,332 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:47:03,462 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:48:34,961 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:48:34,962 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:48:34,963 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:48:36,358 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:48:36,492 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:49:09,572 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:49:09,572 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:49:09,573 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:49:10,879 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:49:11,014 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:50:42,938 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:50:42,938 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:50:42,939 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:50:44,369 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:50:44,509 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:51:15,224 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:51:15,225 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:51:15,226 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:51:16,532 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:51:16,672 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:51:37,400 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:51:37,401 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:51:37,403 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:51:38,717 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:51:38,858 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:52:00,245 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:52:00,246 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:52:00,247 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:52:01,763 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:52:01,906 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:52:28,173 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:52:28,173 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:52:28,177 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:52:29,499 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:52:29,636 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:52:38,807 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:52:38,808 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:52:38,808 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:52:40,120 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:52:40,335 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:53:03,768 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:53:03,768 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:53:03,769 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:53:05,091 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:53:05,228 - core.database.connection_manager - INFO - Neo4j connection closed
+2025-10-26 14:53:07,810 - core.database.connection_manager - INFO - Connecting to Neo4j at: neo4j+ssc://ac4698e2.databases.neo4j.io
+2025-10-26 14:53:07,811 - core.database.connection_manager - INFO - Using username: neo4j
+2025-10-26 14:53:07,811 - core.database.connection_manager - INFO - Testing connection...
+2025-10-26 14:53:09,270 - core.database.connection_manager - INFO - ✅ Neo4j connection established successfully
+2025-10-26 14:53:11,109 - utils.text_utils - INFO - NLTK punkt_tab found
+2025-10-26 14:53:11,669 - core.processor.text_processor - INFO - Found 12 unique entities
+2025-10-26 14:53:17,436 - core.processor.text_processor - INFO - Extracted 5 relationships from 17 sentences
+2025-10-26 14:54:26,751 - core.database.connection_manager - INFO - Neo4j connection closed
