@@ -6,17 +6,6 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 from config.config import FILE_CONFIG
 import spacy
 
-model_name = "en_core_web_sm"
-
-try:
-    nlp = spacy.load(model_name)
-except OSError:
-    import subprocess
-    import sys
-    subprocess.run([sys.executable, "-m", "spacy", "download", model_name])
-    nlp = spacy.load(model_name)
-
-
 def render_file_uploader() -> UploadedFile | None:
     """
     Render file upload component.

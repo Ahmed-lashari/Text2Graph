@@ -15,13 +15,15 @@ class RelationshipExtractor:
     """Extract relationships between entities using spaCy."""
     def __init__(self):
         """Initialize spaCy model."""
+    
         try:
             self.nlp = spacy.load(NLP_CONFIG["spacy_model"])
         except OSError:
-            logger.error(f"spaCy model '{NLP_CONFIG['spacy_model']}' not found")
-            raise RuntimeError(
-                f"Please install spaCy model: python -m spacy download {NLP_CONFIG['spacy_model']}"
-            )
+            import subprocess
+            import sys
+            subprocess.run([sys.executable, "-m", "spacy", "download", NLP_CONFIG["spacy_model"]])
+            self.nlp = spacy.load(NLP_CONFIG["spacy_model"])
+        
     
     
     def extract_from_sentences(
