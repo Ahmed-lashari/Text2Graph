@@ -4,9 +4,7 @@ Enhanced graph builder with beautiful visualization support.
 from neo4j import Driver, Session
 import pandas as pd
 from pyvis.network import Network
-from typing import Dict, List
-import random
-
+from typing import Dict
 
 class GraphBuilder:
     """Build and visualize knowledge graphs in Neo4j."""
