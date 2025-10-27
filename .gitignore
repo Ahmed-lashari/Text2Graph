@@ -1,0 +1,6 @@
+.devcontainer
+.vscode
+config/app.log
+lib/
+__pycache__/
+graph.html

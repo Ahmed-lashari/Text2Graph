@@ -30,6 +30,7 @@ NEO4J_CONFIG = {
 # NLP Configuration
 NLP_CONFIG = {
     "spacy_model": "en_core_web_sm",
+    "spacy_model_path": PROJECT_ROOT / "config" / "models" / "en_core_web_sm",
     "nltk_data_path": str(NLTK_DATA_DIR),
     "required_nltk_packages": ["punkt_tab"],  # ONLY punkt_tab is needed
 }

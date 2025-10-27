@@ -2,9 +2,12 @@
 Entity extraction using spaCy.
 """
 import spacy
-from typing import List, Dict, Set
+import streamlit as st
+from typing import List, Dict
 from config.config import NLP_CONFIG
 from utils.logger import setup_logger
+from pathlib import Path
+
 
 logger = setup_logger(__name__)
 
@@ -15,13 +18,22 @@ class EntityExtractor:
     def __init__(self):
         """Initialize spaCy model."""
         try:
-            self.nlp = spacy.load(NLP_CONFIG["spacy_model"])
-        except OSError:
-            logger.error(f"spaCy model '{NLP_CONFIG['spacy_model']}' not found")
-            raise RuntimeError(
-                f"Please install spaCy model: python -m spacy download {NLP_CONFIG['spacy_model']}"
-            )
-    
+            model_path: Path= Path(NLP_CONFIG['spacy_model_path'])
+            if model_path.exists():
+                st.info(f"📂 Loading spaCy model from: {model_path}")
+                self.nlp = spacy.load(str(model_path))
+                st.success("✅ Model loaded successfully from local directory!")
+                
+            else:
+                # Fallback: try loading installed model
+                st.warning("⚠️ Local model not found, trying installed model...")
+                self.nlp = spacy.load("en_core_web_sm")
+                
+        except Exception as e:
+            st.error(f"❌ Failed to load spaCy model: {str(e)}")
+            st.info(f"Tried path: {model_path}")
+            st.stop()
+
     def extract_from_text(self, text: str) -> List[Dict[str, str]]:
         """
         Extract entities from text.
