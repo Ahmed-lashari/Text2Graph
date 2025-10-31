@@ -49,10 +49,10 @@ class GraphService:
                 🎓 AI UnderGrad<br>
                 📍 Pakistan<br>
                 Exploring diverse tech stacks<br>
-                <a href='YOUR_LINKEDIN_URL' target='_blank'>
+                <a href='https://www.linkedin.com/in/muhammad-ahmed-lashari-826761289/' target='_blank'>
                     <img src='https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white' />
                 </a>
-                <a href='YOUR_GITHUB_URL' target='_blank'>
+                <a href='https://github.com/Ahmed-lashari' target='_blank'>
                     <img src='https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white' />
                 </a>
             </div>

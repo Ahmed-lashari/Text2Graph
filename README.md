@@ -1,8 +1,8 @@
-# 🧠 Text2Graph
+# 🧠 Text2Graph - Knowledge Graph Generator
 
 ## Project Overview
 
-[**Text2Graph**](https://neo4j-text2graph.streamlit.app/)
+[**Text2Graph**](https://text2graph-generator.streamlit.app/)
  is an advanced knowledge graph generation platform designed to convert both structured and unstructured data into interactive, queryable graph representations. The system supports CSV, JSON, and plain text files, generating nodes and relationships within a Neo4j database. For dynamic visualization, the platform integrates PyVis with Streamlit to provide an intuitive and interactive user interface.
 
 The primary objective of Text2Graph is to enable users to uncover hidden relationships, identify patterns, and extract actionable insights from raw data without extensive manual preprocessing.
@@ -101,7 +101,7 @@ TEXT2GRAPH/
 
 ### Prerequisites
 
-* Python 3.10+
+* Python 3.11
 * Neo4j AuraDB or local Neo4j instance
 * Streamlit
 * spaCy (`en_core_web_sm` model)
@@ -113,7 +113,7 @@ TEXT2GRAPH/
 
 ```bash
 # Clone repository
-git clone <repository_url>
+git clone https://github.com/Ahmed-lashari/Text2Graph.git
 cd Text2Graph
 
 # Create and activate virtual environment
@@ -123,11 +123,6 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Download spaCy model
-python -m spacy download en_core_web_sm
-
-# Download NLTK tokenizer
-python -m nltk.downloader punkt
 ```
 
 ---
