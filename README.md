@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-**Text2Graph** is an advanced knowledge graph generation platform designed to convert both structured and unstructured data into interactive, queryable graph representations. The system supports CSV, JSON, and plain text files, generating nodes and relationships within a Neo4j database. For dynamic visualization, the platform integrates PyVis with Streamlit to provide an intuitive and interactive user interface.
+[**Text2Graph**](https://neo4j-text2graph.streamlit.app/)
+ is an advanced knowledge graph generation platform designed to convert both structured and unstructured data into interactive, queryable graph representations. The system supports CSV, JSON, and plain text files, generating nodes and relationships within a Neo4j database. For dynamic visualization, the platform integrates PyVis with Streamlit to provide an intuitive and interactive user interface.
 
 The primary objective of Text2Graph is to enable users to uncover hidden relationships, identify patterns, and extract actionable insights from raw data without extensive manual preprocessing.
 

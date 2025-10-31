@@ -45,7 +45,7 @@ class GraphService:
             st.markdown(
             """
             <div style="position:fixed; bottom:10px; width:230px; font-size:0.85em;">
-                <strong>M.A. Lashari</strong><br>
+                <strong>M.A.Lashari</strong><br>
                 🎓 AI UnderGrad<br>
                 📍 Pakistan<br>
                 Exploring diverse tech stacks<br>

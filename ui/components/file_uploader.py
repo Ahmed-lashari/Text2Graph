@@ -4,7 +4,6 @@ File uploader UI component.
 import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 from config.config import FILE_CONFIG
-import spacy
 
 def render_file_uploader() -> UploadedFile | None:
     """
